@@ -1,0 +1,821 @@
+body {
+background: white;
+}
+* {
+  box-sizing: border-box;
+  font-family: Noto Sans KR;
+   color: #6E6767; 
+}
+
+/* dHead */
+#dHead {position:relative; height:111px; /*border-top:4px solid #ff6a00;*/ border-bottom:1px solid #ff6400;}/* 231101 수정 */
+
+#dHead #gnbWrap {position:relative; width:1140px; height:100%; margin:0 auto; clear:both; display: flex; align-items: center;}/* 231101 수정 */
+#dHead h1 {float:left; width:186px; /*margin-top:25px;*/}/* 231101 수정 */
+#dHead .gnb {position:absolute; top:22px; right:0;}
+#dHead .gnb > li {float:left;margin-left:84px !important;}/* 231101 수정 */
+#dHead .gnb > li > a {display:block; height:65px; color:#111; line-height:65px; font-size:18px; font-weight:500;}
+#dHead .gnb > li > a.on {border-bottom:4px solid #ff6a00;}
+#dHead .gnb > li > a:hover {border-bottom:4px solid #ff6a00;}
+
+#dHead .submenu-wrap-sy {  
+  display:none; 
+  position:absolute; top:111px; width:100%; border-top:1px solid #e6e6e6;  border-bottom:1px solid #888; background:#fff; overflow:hidden; z-index:50;
+
+}
+#dHead .submenu-wrap-sy > div {width:1140px; margin:0 auto;}
+#dHead .submenu-wrap-sy .submenu {float:right;}
+#dHead .submenu-wrap-sy ul {float:left; width:95px; padding:16px 0;}
+#dHead .submenu-wrap-sy ul li {line-height:38px; text-align:center;}
+#dHead .submenu-wrap-sy ul li a {color:#867d77; font-size:15px; font-weight:400;}
+#dHead .submenu-wrap-sy ul li a:hover {color:#000;}
+#dHead .submenu-wrap-sy ul.sub02 {width:115px;margin-left:33px;}
+#dHead .submenu-wrap-sy ul.sub03 {margin-left:50px;}
+#dHead .submenu-wrap-sy ul.sub04 {margin-left:57px;}
+#dHead .submenu-wrap-sy ul.sub05 {margin-left:30px;}
+#dHead .submenu-wrap-sy ul.sub06 {width:80px; margin-left:45px;margin-right:-12px;}
+
+#dHead {
+  position: relative;
+  z-index: 9999;
+}
+
+.wrap {
+  max-width: 1920px; 
+  /* height: 8300px;  */
+  position: relative; 
+  background: white; overflow: hidden;
+  margin: 0 auto;
+}
+
+.inner
+{
+  /* max-width: 1920px;  */
+  width: 1400px; height: 100%;
+  padding: 0 0px;
+  margin: 0 auto;
+  /* background: yellow; */
+}
+
+.title, .title-sns {font-size: 50px; font-weight: 800;}
+.sub-title{font-size: 30px; font-weight: 350;}
+
+/*  */
+.blank {
+  width: 100%;
+  height: 680px;
+}
+.contents {
+  position: relative;
+}
+
+/* ======================test ===================== */
+.main-brand {
+    position: relative;
+    background: #f5f5f5;
+    padding-bottom: 100px
+}
+
+.brand-slider {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 1974px;
+    margin: auto;
+}
+
+.brand-slider .embla__viewport {
+    overflow: hidden;
+}
+
+.brand-slider .embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(1rem * -2);
+}
+
+.brand-slider .embla__slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 370px;
+    min-width: 0;
+    padding-left: 30px;
+}
+
+.brand-slider .embla__controls {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.brand-slider .embla__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+    pointer-events: none;
+}
+
+.brand-slider .embla__button {
+    width: 80px;
+    height: 80px;
+    ;-webkit-appearance: none;
+    appearance: none;
+    pointer-events: auto;
+}
+
+.brand-slider .embla__button:disabled {
+    color: rgb(192, 192, 192);
+}
+
+.brand-slider .embla__button.embla__button--prev {
+    background: rgba(0, 0, 0, 0.6) url('data:image/svg+xml,<svg width="19" height="34" viewBox="0 0 19 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 2L2 17L17 32" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+}
+
+.brand-slider .embla__button.embla__button--next {
+    background: rgba(0, 0, 0, 0.6) url('data:image/svg+xml,<svg width="19" height="34" viewBox="0 0 19 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L17 17L2 32" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+}
+
+.brand-slider .embla__slide__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    user-select: none;
+    transform-origin: top;
+}
+
+.brand-slider .embla__slide__number img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    will-change: transform;
+}
+
+.brand-slider .embla__slide__number a {
+    display: block;
+    border-radius: 1.8rem;
+    overflow: hidden
+}
+
+.brand-slider .embla__slide__number .desc {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    left: 0;
+    margin: 0;
+    line-height: 1.3;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: CJONLYONE,"Noto Sans KR";
+    opacity: 0;
+    transition: bottom .2s linear, opacity .2s linear
+}
+
+.brand-slider .is-snapped .embla__slide__number .desc {
+    opacity: 1;
+    bottom: 70px
+}
+
+
+
+
+
+
+
+/* ======================1 brand ====================== */
+.brand {
+  width: 100%;  height: 1100px;
+  text-align: center;  
+  background: url("../img/main/bg/bg_brand.png") no-repeat;
+  /* border: 1px solid #000; */
+
+  position: relative;
+  overflow:hidden;
+}
+
+.bg_con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  background: url(../img/main/bg/prd_bg.png) no-repeat center/cover;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 2.5s ease-in-out;
+  /* opacity: 0.5; */
+}
+
+.bg_con.on {
+  width: 500%;
+  height: 500%;
+}
+
+    /* .ottogi_prd .bg_con{
+    display:block;position:absolute;top:-300px;left:50%;z-index:-10;
+    width:42.875%;height:189.91%;
+    margin-left:-5%;
+    background:url(../images/common/prd_bg.png)no-repeat 50%/100%;
+    transform:translateX(-50%);
+    transition:width 4s, height 10s;
+    }
+    .ottogi_prd .bg_con.on{width:500%;height:500%;} */
+
+
+/* .brand .inner {background: aqua;} */
+.brand .cons {
+  display: flex; gap:10px;   
+  width: 100%; height: 100%;
+  /* background: gray; */
+}
+
+.brand .brand-rect {
+  width: calc(100% / 3); height: 400px;
+  text-align: center;  
+}
+
+.brand .txt {font-size: 30px; font-weight: bold; margin: 30px;}
+.brand .pic {
+  width: 100%;height: 100%;
+  border-radius: 50px;
+  border: 7px solid #ff6400;
+}
+
+.brand .noodle .pic {background: url("../img/main/2brand/buldak.png") no-repeat center /contain;}
+.brand .snack .pic {background: url("../img/main/2brand/snack_popeye.png") no-repeat center /contain;}
+.brand .sauce .pic {background: url("../img/main/2brand/sauce4.png") no-repeat center /contain;}
+
+.brand .button {
+  width: 240px;height: 48px;  margin: 0 auto; 
+  margin-top: 70px;
+}
+.brand .noodle .button {background: url("../img/main/button/noodle.png") no-repeat center /contain;;}
+.brand .snack .button {background: url("../img/main/button/snack.png") no-repeat center /contain;;}
+.brand .sauce .button {background: url("../img/main/button/sauce.png") no-repeat center /contain;;}
+
+/* ====================== about ====================== */
+.about {
+  width: 100%;  height: 1880px;
+  text-align: center;  
+  background: url("../img/main/bg/bg_about.png") no-repeat left top /cover;
+  position: relative;
+}
+
+.about .title-about {
+text-align-last: left; ;
+color: #FF6400; 
+font-size: 80px;  font-weight: 700; word-wrap: break-word
+}
+
+.about .sub-title {
+  width: 751px; 
+  text-align-last: left;   line-height: 36px;   word-wrap: break-word;
+}
+
+/* --------- about 텍스트들 ------------ */
+.about .con-txt { 
+  /* padding-top: 100px; */
+  /* top: 0px; left: 50px;    */
+  position: relative; 
+}
+
+.about .con-txt span:first-of-type {
+  text-align: center; color: #FF6400; font-size: 50px;  font-weight: 700; word-wrap: break-word
+}
+.about .con-txt span:nth-of-type(2) {
+  text-align: center; color: black; font-size: 30px; 
+  font-weight: 400; word-wrap: break-word;
+}
+/* --------- about 텍스트들 끝 ------------ */
+
+.about .inner {position: relative;
+   /* background: rgba(165, 231, 11, 0.3) */
+  }
+.about .sub-title {margin-bottom: 30px;}
+
+.about .con {display:flex; align-items: center;}
+.about .con .con-txt {padding: 30px;}
+.about .con1 {height: 500px; /*background: skyblue;*/}
+.about .con2 {height: 300px; /*background: pink;*/ }
+.about .con3 {height: 500px; /*background: orange;*/}
+
+.about .circle1{
+  width: 500px;   height: 500px; 
+  left: 260px;   top: 1720px; 
+  border-radius: 9999px; 
+  border: 15px #ED8226 solid;
+  background: url("../img/main/3about/about1.jpg") center /cover;
+}
+
+.about .con2 .con-txt {
+  top: 0px; left: 550px;   
+  position: relative; 
+}
+
+.about .circle2{
+  width: 500px;   height: 500px;  left: calc(100% - 500px);  top: 600px; 
+  position: absolute; 
+  border-radius: 9999px; 
+  border: 15px #ED8226 solid;
+  background: url("../img/main/3about/about2.jpg") center /cover;
+}
+
+.about .circle3{
+  left: 260px;   top: 2520px; 
+  width: 500px;   height: 500px; 
+  border-radius: 9999px; 
+  border: 15px #ED8226 solid;
+  background: url("../img/main/3about/about3.jpg") center /cover;
+}
+
+/* about - bg */
+.about .rect3 {
+  position :absolute;
+  top : 0%; 
+  width: 100%;  height: 100%;
+  background: url("../img/main/bg/rect3.png") no-repeat left top / cover;
+}
+
+.about .rect4 {
+  position : absolute;
+  top : 0%;
+  width: 100%;  height: 100%;
+  background: url("../img/main/bg/rect4.png") no-repeat left top / cover;
+}
+
+.about .button {
+  width: 240px;height: 48px;  margin: 0 auto; 
+  margin-top: 150px;
+  background: url("../img/main/button/more.png") no-repeat left top / cover;
+}
+
+
+
+/* ====================== esg ====================== */
+.esg {
+  width: 100%;  height: 1200px;  
+  text-align: center;
+  /* border: 1px solid blue; */
+}
+
+.esg .cons {
+  display: flex; gap:10px;   
+  width: 100%; height: 800px;
+  /* background: pink; */
+}
+
+.esg .esg-rect {
+  width: calc(100% / 3); height: 700px;
+  text-align: center;  
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.esg .pic {
+  width: 100%;height: 670px;
+  border-radius: 50px;
+  border: 7px solid #ff6400;
+  background: yellow;
+  margin-top: 30px;
+}
+
+.esg .e .pic {background: url("../img/main/4ESG/1E.png") no-repeat center /cover;}
+.esg .s .pic {background: url("../img/main/4ESG/2S.png") no-repeat center /cover;}
+.esg .g .pic {background: url("../img/main/4ESG/3G.png") no-repeat center /cover;}
+
+
+/* ----------------- */
+.esg .fl {display: flex;}
+
+.esg .txt {
+  font-size: 300px; font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+
+  line-height: 300px;
+  position : absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.esg .s .txt {  color: rgba(1, 1, 1, 0.6);}
+
+/* ----------------- */
+
+
+.esg .ico {width: 164px; height: 164px; position: absolute; left:200px; bottom: 0;}
+.esg .e .ico {background: url("../img/main/icon/plant.png") no-repeat center /cover;}
+.esg .s .ico {background: url("../img/main/icon/people.png") no-repeat center /cover;}
+.esg .g .ico {background: url("../img/main/icon/gov.png") no-repeat center /cover;}
+
+.esg .button {
+  width: 240px;height: 48px;  
+  margin: 0 auto;  
+  background: url("../img/main/button/more.png") no-repeat center /contain;
+
+}
+
+
+
+/* ====================== sns (Enjoy together) ====================== */
+.sns {
+  width: 100%;  height: 880px;
+  text-align: center;
+  /* border: 1px solid #000; */
+  /* background: ul("../img/main/bg/bg_sns.png")  no-repeat center /cover; */
+  position:relative;
+}
+.sns .title {color:#e60012; text-align-last: left;}
+.sns .sub-title {text-align-last: left;}
+
+.sns .inner {
+  /* background: yellowgreen; */
+  height: 250px; /* 또는 필요한 만큼 */
+  padding: 0 20px; /* 좌우 패딩 추가하여 텍스트가 너무 붙지 않게 */
+}
+
+.sns .cons {
+  display: flex;
+  gap: 10px;
+  width: 100%; /* 부모 요소에 맞게 확장 */
+  max-width: 1920px; /* 최대 너비 제한 */
+  margin: 0 auto; /* 가운데 정렬 */
+  /* flex-wrap: wrap;  */
+  /* 줄바꿈 허용 */
+  justify-content: center; /* 항목들을 가운데로 정렬 */
+  height: 600px;
+  min-height: 300px;
+}
+
+.sns .s-rect {
+  width: 450px; /* 5개 항목, 40px은 4개의 gap(10px*4) */
+  max-width: 450px; /* 각 사각형의 최대 너비 */
+  height: 450px; /* 높이는 고정 */
+  text-align: center;
+}
+
+.sns .pic {
+  width: 300px; /* 부모 s-rect에 맞게 너비 조절 */
+  height: 300px; /* 부모 s-rect에 맞게 높이 조절 */
+  border-radius: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* overflow:hidden; */ /* pic에 overflow:hidden은 필요 없을 수 있음. s-rect에 주거나 제거 */
+}
+
+.sns .s1 .pic {background: url("../img/main/5SNS/sns1.png") no-repeat center /cover;}
+.sns .s2 .pic {background: url("../img/main/5SNS/sns2.png") no-repeat center /cover;}
+.sns .s3 .pic {background: url("../img/main/5SNS/sns3.png") no-repeat center /cover;}
+.sns .s4 .pic {background: url("../img/main/5SNS/sns4.png") no-repeat center /cover;}
+.sns .s5 .pic {background: url("../img/main/5SNS/sns5.png") no-repeat center /cover;}
+
+
+/* ====================== slider ====================== */
+
+
+
+/* ====================== recipe ====================== */
+.recipe {
+  width: 100%;  height: 1110px;  
+  text-align: center;
+  /* border: 1px solid blue; */
+  /* position: relative; */
+}
+
+.recipe .inner {
+  position: relative;
+}
+.recipe .cons {
+  display: flex; gap:10px;   
+  width: 100%; height: 800px;
+  /* background: pink; */
+}
+
+.recipe .r-rect {
+  width: calc(100% / 3); height: 900px;
+  text-align: center;  
+  overflow: hidden;  
+}
+
+.recipe .pic {
+  width: 100%;height: 670px;
+  border-radius: 50px;
+  border: 7px solid #ff6400;
+  background: yellow;
+  margin-top: 30px;
+}
+
+.recipe .r1 .pic {background: url("../img/main/6RECIPE/recipe1.jpg") no-repeat left top /cover;}
+.recipe .r2 .pic {background: url("../img/main/6RECIPE/recipe2.jpg") no-repeat left top /cover;}
+.recipe .r3 .pic {background: url("../img/main/6RECIPE/recipe3.jpg") no-repeat left top /cover;}
+
+
+.recipe .bg {
+  position: absolute; left: 0;top: 0;
+  width: 100%;height: 100%;
+  background: url("../img/main/bg/bg_recipe.png") no-repeat center /cover;}
+
+/* ====================== news ====================== */
+.news {
+  width: 100%;   height: 868px;
+  text-align: center;
+  /* border: 1px solid #000; */
+  background: url("../img/main/bg/bg_about.png") no-repeat center /cover;
+}
+
+.news .cons {
+  display: flex; gap:10px;   
+  width: 100%; height: 600px;
+  /* background: pink; */
+}
+
+.news .n-rect {
+  width: calc(100% / 3); height: 100%;
+  text-align: center;  
+  overflow: hidden;
+
+  text-align: center; 
+   position: relative;
+}
+
+.news .pic {
+  width: 100%;height: 550px;
+  border-radius: 50px 50px 0 0 ;
+  border: 7px solid #ff6400;
+  background: yellow;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.news .n1 .pic {background: url("../img/main/7NEWS/news1.png") no-repeat center /cover;}
+.news .n2 .pic {background: url("../img/main/7NEWS/news2.jpg") no-repeat center /cover;}
+.news .n3 .pic {background: url("../img/main/7NEWS/news3.png") no-repeat center /cover;}
+
+.news .n-rect .bg {
+  position : absolute;  bottom: 25px;    left :0;
+  width: 100%;
+  height: 200px; 
+  /* border-radius: 100px 100px 0 0 ; */
+  background: rgba(1, 1, 1, 0.5);
+  z-index: 10;
+  
+}
+.news .txt {
+  position : absolute;  bottom: 50px;    left :0;
+  width: 100%;
+  height: 150px; 
+  
+  margin-top : 50px;
+  font-size: 30px; 
+  font-weight: 5000;
+  color:white;
+  z-index: 10;
+}
+
+/* ====================== footer ====================== */
+footer {
+  text-align: center;
+  width: 100%;  
+  height: 680px;
+  border: 1px solid #000;
+
+}
+
+/* ------------ slide ------------------------- */
+
+.main-visual.embla {
+  /* position: relative; */
+  /* z-index:-9999; */
+  position:absolute;
+  left:0;
+  top:0;
+  max-width: 100%;
+  min-width: 1280px;
+  height: 680px;
+  margin: auto;
+}
+
+.main-visual.embla::before {
+  content: "";
+  position: absolute;
+  /* z-index: -1; */
+  left: -10px;
+  top: 10px;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  border-bottom-left-radius: 360px;
+  background: linear-gradient(270deg, #F5440F -0.83%, #E81622 49.58%, #594EA2 100%);
+}
+
+.main-visual.embla::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 1px;
+  top: 0;
+  bottom: 10px;
+  right: 0;
+  width: auto;
+  border-bottom-left-radius: 360px;
+  background: #000
+}
+
+.main-visual .embla__viewport {
+  overflow: hidden;
+  border-bottom-left-radius: 360px;
+}
+
+.main-visual .embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+}
+
+.main-visual .embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.main-visual .embla__slide__img {
+  display: block;
+  height: 670px;
+  width: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+
+.main-visual .text-animation {
+  position: absolute;
+  bottom: 80px;
+  left: 18%;
+  width: 50%;
+  text-align: left;
+  padding: 0;
+  color: white;
+  font-size: 1.4rem;
+  overflow: hidden;
+}
+
+/*
+opacity: 0 상태로 시작해 translateY(20px)로 아래에서 올라온 모습.
+
+animation-delay를 줄 때 순서대로 지연을 주면 문장들이 순차적으로 나타나는 연출이 됩니다.
+*/
+
+.text-animation span {
+display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line-height: 1.2; margin-left:10px;  
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFade 0.8s forwards;
+}
+
+/* stagger 효과 */
+.text-animation span:nth-of-type(1) {
+  animation-delay: 0.3s;
+}
+.text-animation span:nth-of-type(2) {
+  animation-delay: 0.6s;
+}
+.text-animation span:nth-of-type(3) {
+  animation-delay: 0.9s;
+}
+
+@keyframes slideUpFade {
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+
+
+/*  */
+
+.embla__controls {
+  position: absolute;
+  bottom: 90px;
+  right: 18%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+  /* z-index: 10; */
+}
+
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+  display: none;
+}
+
+.embla__button {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 3.6rem;
+  height: 3.6rem;
+  /* z-index: 1; */
+  border-radius: 50%;
+  color: var(--text-body);
+  align-items: center;
+  justify-content: center;
+}
+
+.embla__button:disabled {
+  color: var(--detail-high-contrast);
+}
+
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+}
+
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px
+}
+
+.embla__dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: none;
+  border: 0 none;
+  padding: 0;
+  margin: 0
+}
+
+.embla__dot:after {
+  content: '';
+  display: flex;
+  width: 32px;
+  height: 4px;
+  padding: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.3);
+   /* background: rgba(0, 0, 0, 0.3); */
+}
+
+.embla__dot--selected:after {
+  background: #fff
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.embla__play {
+  display: inline-flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: url(../img/main/icon/icon_slider_play.png);
+  background-size: 40px 40px;
+  cursor: pointer;
+  border: 0 none;
+  font-size: 0;
+  color: transparent;
+  /* z-index : 11; */
+}
+
+.embla__play.stop {
+  background: url(../img/main/icon/icon_slider_stop.png);
+  background-size: 40px 40px;
+}
