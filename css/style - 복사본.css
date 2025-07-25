@@ -74,38 +74,95 @@ background: white;
 }
 
 
+
 /* ======================1 brand ====================== */
 .brand {
-    width: 100%;
-    height: 1100px; /* 콘텐츠에 따라 height: auto; 고려 */
-    text-align: center;
-    background: url("../img/main/bg/bg_brand.png") no-repeat;
-    position: relative;
-    overflow: hidden;
+  width: 100%;  height: 1100px;
+  text-align: center;  
+  background: url("../img/main/bg/bg_brand.png") no-repeat;
+  /* border: 1px solid #000; */
+
+  position: relative;
+  overflow:hidden;
 }
 
 .bg_con {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    transform: translate(-50%, -50%);
-    background: url(../img/main/bg/prd_bg.png) no-repeat center/cover;
-    border-radius: 50%;
-    z-index: -1;
-    transition: all 2.5s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  background: url(../img/main/bg/prd_bg.png) no-repeat center/cover;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 2.5s ease-in-out;
+  /* opacity: 0.5; */
 }
 
 .bg_con.on {
-    width: 500%;
-    height: 500%;
+  width: 500%;
+  height: 500%;
 }
 
+    /* .ottogi_prd .bg_con{
+    display:block;position:absolute;top:-300px;left:50%;z-index:-10;
+    width:42.875%;height:189.91%;
+    margin-left:-5%;
+    background:url(../images/common/prd_bg.png)no-repeat 50%/100%;
+    transform:translateX(-50%);
+    transition:width 4s, height 10s;
+    }
+    .ottogi_prd .bg_con.on{width:500%;height:500%;} */
+
+
+/* .brand .inner {background: aqua;} */
+
+
+
+.brand .cons {
+  display: flex; gap:10px;   
+  width: 100%; height: 100%;
+  /* background: gray; */
+}
+
+.brand .brand-rect {
+  /* width: 400px ;  */
+  width : calc (100% / 3);
+  height: 600px;
+  text-align: center;  
+
+}
+
+.brand .txt {font-size: 30px; font-weight: bold; margin: 30px;}
+.brand .pic {
+  width: 400px;height: 400px;
+  border-radius: 50px;
+  border: 7px solid #ff6400;
+  margin: 0 auto;
+
+}
+
+.brand .noodle .pic {background: url("../img/main/2brand/buldak.png") no-repeat center /contain;}
+.brand .snack .pic {background: url("../img/main/2brand/snack_popeye.png") no-repeat center /contain;}
+.brand .sauce .pic {background: url("../img/main/2brand/sauce4.png") no-repeat center /contain;}
+
+.brand .button {
+  width: 240px;height: 48px;  margin: 0 auto; 
+  margin-top: 20px;
+}
+.brand .noodle .button {background: url("../img/main/button/noodle.png") no-repeat center /contain;;}
+.brand .snack .button {background: url("../img/main/button/snack.png") no-repeat center /contain;;}
+.brand .sauce .button {background: url("../img/main/button/sauce.png") no-repeat center /contain;;}
+
+
+
+/* ai알려줌 */
+/* ====== .brand 섹션 ====== */
 .brand .cons {
     display: flex;
     gap: 10px;
-    width: 100%;
+    width: 100%; /* 부모 요소의 100%를 사용하도록 */
     height: 100%; /* 또는 height: auto; */
 }
 
@@ -122,7 +179,6 @@ background: white;
 }
 
 .brand .pic {
-    /* 이전의 중복된 width: 400px; height: 400px; 등은 제거되었습니다. */
     width: 100%; /* 부모 요소의 너비에 맞춰 유동적으로 조절 */
     max-width: 400px; /* 원본 이미지 크기 이상으로 커지지 않도록 최대 너비 제한 */
     height: 0; /* padding-bottom으로 비율을 제어하기 위해 높이를 0으로 설정 */
@@ -135,7 +191,6 @@ background: white;
     background-repeat: no-repeat;
 }
 
-/* 개별 배경 이미지 설정 (background-image만 사용) */
 .brand .noodle .pic {
     background-image: url("../img/main/2brand/buldak.png");
 }
@@ -145,6 +200,8 @@ background: white;
 .brand .sauce .pic {
     background-image: url("../img/main/2brand/sauce4.png");
 }
+/* background 속성에서 no-repeat center /contain 은 .brand .pic 에서 이미 정의되었으므로 background-image만 사용해도 됩니다. */
+
 
 .brand .button {
     width: 240px;
@@ -152,8 +209,6 @@ background: white;
     margin: 0 auto;
     margin-top: 20px;
 }
-
-/* 개별 버튼 배경 이미지 설정 (background-image만 사용) */
 .brand .noodle .button {
     background-image: url("../img/main/button/noodle.png");
 }
@@ -163,6 +218,10 @@ background: white;
 .brand .sauce .button {
     background-image: url("../img/main/button/sauce.png");
 }
+/* 위와 동일하게 background-image만 사용 */
+
+
+
 
 
 /* ====================== about ====================== */
@@ -1049,20 +1108,78 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
 
 
 
-/* 991px보다 작아지면, */
+
+/* 991px보다 작아지면,  */
 @media (max-width: 991px) {
+
+  .brand .cons {
+    display: flex; gap:10px;
+    flex-direction: column;
+    width: 100%; height: 100%;
+    /* background: gray; */
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      
+  }
+  .brand {
+    /* width: 100vw;   */
+    /* width 고치니까 보임 */
+    height: 2500px;
+    
+  }
+  .brand-rect {
+    /* width: calc(100vh); */
+    height: auto;
+  }
+
+  /* 2. about */
+  .about .inner {
+    background: aquablue;
+    /* width: 991px; */
+  }
+  .about {height: 2500px; }
+  .about .con-wrapper {display:flex; flex-direction: column;
+
+    
+  }
+  .about .con {display:flex; flex-direction: column;
+    height : 700px;
+   
+    }
+  .about .con2 {display:flex; flex-direction: column-reverse;
+    height : 700px;
+    }
+  .about .circle2{
+    /* position: relative; */
+    position:static;
+    /* top: 0; left: 0;    */
+  }
+
+  .about .con2 .con-txt {
+    position:static;
+    /* left: 0; */
+  }
+  .about .button {
+    margin-top: 15px;
+  }
+
+
+
+
+
+  /* ai알려줌*/
+
     .brand .cons {
         flex-direction: column; /* 세로 배열 */
         gap: 20px; /* 항목 간 간격 조정 */
-        width: 100%; /* 명시적 선언 */
-        height: auto; /* 콘텐츠에 따라 높이 자동 조절 */
+        /* width: 100%; height: 100%; 는 이미 기본값으로 충분한 경우가 많습니다. */
         justify-content: center;
         align-items: center;
-        margin: 0 auto; /* 중앙 정렬 */
     }
     .brand {
         height: auto; /* 모바일에서 높이 자동 조절 */
-        width: 100%; /* 명시적 선언 */
+        /* width: 100%; 와 같은 기본 값은 불필요. */
     }
     .brand .brand-rect {
         width: 90%; /* 화면 여백을 위해 뷰포트의 90% 사용 */
@@ -1071,22 +1188,17 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
         margin-bottom: 0; /* flex gap으로 간격 처리 */
     }
 
-    /* 2. about 섹션 관련 */
-    .about .inner {
-        /* background: aquablue; (디버깅용으로 보임) */
-        width: 100%; /* 뷰포트에 맞춰 100%로 설정 */
-    }
+    /* .about 섹션 관련 (간단히 정리) */
     .about {
         height: auto; /* 높이 자동 조절 */
     }
     .about .con-wrapper {
-        display: flex;
         flex-direction: column;
     }
     .about .con,
     .about .con2 {
         flex-direction: column;
-        height: auto; /* 콘텐츠에 따라 높이 조절 */
+        height: auto; /* 컨텐츠에 따라 높이 조절 */
         margin-bottom: 20px; /* 항목 간 간격 */
     }
     .about .circle2 {
@@ -1098,9 +1210,10 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
     .about .button {
         margin-top: 15px;
     }
-
+    
     /* ⚠️⚠️⚠️ 이 부분은 반드시 삭제하세요. ⚠️⚠️⚠️ */
     /* .body, .wrap, .contents, .inner { width: 200vw; } */
     /* .html { background: orange;} */
     /* .body { background: orange;} */
-  }
+
+}
