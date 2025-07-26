@@ -14,18 +14,26 @@ $(function(){
   
   AOS.init();   // 타이틀 글자들 fadein하면서 나오기
 
+// 노랑 png 파일 퍼지기
+$(window).on('scroll', function () {
+  var $wt = $(window).scrollTop(); // 현재 스크롤 위치
+  var winW = window.innerWidth;   // 현재 윈도우 가로 폭
 
+  // 디폴트값: PC 기준
+  var offsetVal = 500;
 
-  // 노랑 png 파일 퍼지기
-  $(window).on('scroll', function() {
-    $wt = $(window).scrollTop(); // 🔹 현재 스크롤 위치(px)를 저장
-    $pot = $('.brand').offset().top - 500; // 🔹 대상 요소 위치에서 500px 위 지점 계산
+  // ✅ 뷰포트가 991px 이하이면 다른 값으로 변경
+  if (winW <= 991) {
+    offsetVal = 300; // 예: 모바일은 조금 더 일찍 시작
+  }
 
-    if($wt >= $pot){ // 🔹 스크롤 위치가 해당 지점을 지나면
-      $('.bg_con').addClass('on'); // 🔹 `.bg_con`에 클래스 'on' 추가 (CSS로 노란 배경 확산 애니메이션 수행)
-    }
-  })
- 
+  var $pot = $('.brand').offset().top - offsetVal;
+
+  if ($wt >= $pot) {
+    $('.bg_con').addClass('on');
+  }
+});
+
   //TypeIt animation
   //개인용만 무료임.
   new TypeIt("#typing", {
