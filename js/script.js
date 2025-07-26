@@ -16,17 +16,103 @@ $(function(){
 
 
 
+  // 노랑 png 파일 퍼지기
   $(window).on('scroll', function() {
-  $wt = $(window).scrollTop(); // 🔹 현재 스크롤 위치(px)를 저장
-  $pot = $('.brand').offset().top - 500; // 🔹 대상 요소 위치에서 500px 위 지점 계산
-  if($wt >= $pot){ // 🔹 스크롤 위치가 해당 지점을 지나면
-    $('.bg_con').addClass('on'); // 🔹 `.bg_con`에 클래스 'on' 추가 (CSS로 노란 배경 확산 애니메이션 수행)
-  }
+    $wt = $(window).scrollTop(); // 🔹 현재 스크롤 위치(px)를 저장
+    $pot = $('.brand').offset().top - 500; // 🔹 대상 요소 위치에서 500px 위 지점 계산
+
+    if($wt >= $pot){ // 🔹 스크롤 위치가 해당 지점을 지나면
+      $('.bg_con').addClass('on'); // 🔹 `.bg_con`에 클래스 'on' 추가 (CSS로 노란 배경 확산 애니메이션 수행)
+    }
   })
+ 
+  //TypeIt animation
+  //개인용만 무료임.
+  new TypeIt("#typing", {
+    // strings: ["맛있는 라면을 만나보세요.", "삼양라면, 국물까지 완벽!"],
+    // strings: ["scroll down"],
+    speed: 200,
+    loop: true
+  }).go();
+
+  
+  // 그림 뿅뿅 바뀌기
+  //글로벌 오뚜기 랜덤모션 [s]
+  var ui = {
+    init: function(){
+      ui.main.mainGlobalBanner.init();
+    },
+    main:{
+      mainGlobalBanner : {
+        init:function(){
+          this.tg = $('ul.show_wrap li');
+          ui.main.mainGlobalBanner.scrollAnimation();
+          setTimeout(() => {
+            ui.main.mainGlobalBanner.AnimationActive(this.tg);
+          }, 100);
+        },
+        scrollAnimation: function(){
+          var contentVisible = false;
+
+          $(window).on('scroll',function(){
+            var contentTop = $('.global_ottogi .inner').offset().top;
+            var windowTop = $(window).scrollTop() + 500;
+
+            if(windowTop >= contentTop && !contentVisible){
+              contentVisible = true;
+              $('.global_ottogi .content').addClass('on');
+              ui.main.mainGlobalBanner.showSequentially($('.global_ottogi .content.on li'), 1000);
+            }
+          });
+        },
+        RandomDelay:function(maxDelay){
+          return Math.random() * maxDelay;
+        },
+        showSequentially: function(listItems, maxDelay) {
+          var totalItems = listItems.length;
+          listItems.each(function(index) {
+            var $this = $(this);
+            setTimeout(function() {
+              if ($('.global_ottogi .content').hasClass('on')) {
+                $this.addClass('active');
+              }
+            }, ui.main.mainGlobalBanner.RandomDelay(maxDelay) + 200);
+
+          });
+
+          setInterval(function() {
+            if (listItems.find('.fade').hasClass('active')) {
+              listItems.closest('ul').find('.group1 .fade').removeClass('active');
+              setTimeout(function() {
+                listItems.closest('ul').find('.group2 .fade').removeClass('active');
+              }, 2000);
+
+            } else {
+              listItems.closest('ul').find('.group1 .fade').addClass('active');
+              setTimeout(function() {
+                listItems.closest('ul').find('.group2 .fade').addClass('active');
+              }, 2000);
+            }
+          }, 4000);
+
+        },
+        AnimationActive: function(obj) {
+          if ($('.global_ottogi .content').hasClass('on')) {
+            const listItems = obj;
+            ui.main.mainGlobalBanner.showSequentially(listItems, 1000);
+          }
+        }
+      },
+    }
+  }
+
+  ui.init();
+  //글로벌 오뚜기 랜덤모션 [e]  
   
 });
 
 
+// ----------------------------------------------------------
 //EmblaCarouselArrowButtons
 const addTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
   const togglePrevNextBtnsState = () => {
