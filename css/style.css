@@ -1050,7 +1050,9 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
 
 
 /* 991px보다 작아지면, */
+
 @media (max-width: 991px) {
+    /* Brand 섹션 관련 */
     .brand .cons {
         flex-direction: column; /* 세로 배열 */
         gap: 20px; /* 항목 간 간격 조정 */
@@ -1071,36 +1073,72 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
         margin-bottom: 0; /* flex gap으로 간격 처리 */
     }
 
-    /* 2. about 섹션 관련 */
+    /* 2. about 섹션 관련 (모바일 최적화) */
     .about .inner {
-        /* background: aquablue; (디버깅용으로 보임) */
-        width: 100%; /* 뷰포트에 맞춰 100%로 설정 */
+        width: 100%;
+        padding: 0 20px;
     }
     .about {
-        height: auto; /* 높이 자동 조절 */
+        height: auto; /* 모바일에서 높이 자동 조절 */
+        background-size: contain; /* 모바일에서 배경 이미지 잘리지 않도록 */
+    }
+    .about .title-about {
+        font-size: 60px;
+        text-align: center;
+    }
+    .about .sub-title {
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
     }
     .about .con-wrapper {
-        display: flex;
         flex-direction: column;
     }
-    .about .con,
-    .about .con2 {
-        flex-direction: column;
+    .about .con {
+        flex-direction: column; /* 모든 .con을 세로 배열 */
         height: auto; /* 콘텐츠에 따라 높이 조절 */
         margin-bottom: 20px; /* 항목 간 간격 */
     }
-    .about .circle2 {
-        position: static; /* static으로 변경하여 플로우에 맞춤 */
+    .about .con2 {
+        flex-direction: column-reverse; /* .con2만 순서 반전 */
     }
-    .about .con2 .con-txt {
-        position: static;
+    .about .con .con-txt {
+        padding: 20px;
+        text-align: center;
     }
-    .about .button {
-        margin-top: 15px;
+    .about .con-txt span:first-of-type {
+        font-size: 40px;
+    }
+    .about .con-txt span:nth-of-type(2) {
+        font-size: 24px;
     }
 
-    /* ⚠️⚠️⚠️ 이 부분은 반드시 삭제하세요. ⚠️⚠️⚠️ */
-    /* .body, .wrap, .contents, .inner { width: 200vw; } */
-    /* .html { background: orange;} */
-    /* .body { background: orange;} */
-  }
+    /* 모바일에서 circle 크기 및 위치 재정의 */
+    .about .circle1,
+    .about .circle2,
+    .about .circle3 {
+        position: static; /* 모바일에서는 플로우에 따라 배치되도록 static으로 변경 */
+        top: auto; /* top, left 속성 제거 */
+        left: auto; /* top, left 속성 제거 */
+        
+        /* 너비와 높이를 vw 단위로 동일하게 설정하여 1:1 비율 강제 */
+        width: 90vw; /* 뷰포트 너비의 90%로 크기 증가 */
+        height: 90vw; /* 너비와 동일한 높이로 설정하여 1:1 비율 유지 */
+        
+        max-width: 350px; /* 모바일에서 최대 너비 제한 (필요시 조절) */
+        max-height: 350px; /* 최대 높이도 제한 (필요시 조절) */
+        margin: 0 auto; /* 중앙 정렬 */
+        
+        border-radius: 9999px; /* 원형 유지 */
+        overflow: hidden; /* 혹시 모를 내부 콘텐츠 오버플로우 방지 */
+        
+        /* Flexbox 아이템의 크기 조절 방지 */
+        flex-shrink: 0; /* 아이템이 줄어들지 않도록 방지 */
+        flex-grow: 0; /* 아이템이 늘어나지 않도록 방지 */
+        align-self: center; /* Flex 컨테이너의 stretch 동작 방지 */
+    }
+
+    .about .button {
+        margin-top: 50px;
+    }
+}
