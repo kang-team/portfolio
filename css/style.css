@@ -1081,6 +1081,7 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
     .about {
         height: auto; /* 모바일에서 높이 자동 조절 */
         background-size: contain; /* 모바일에서 배경 이미지 잘리지 않도록 */
+        padding-bottom: 50px; /* 섹션 하단에 여백 추가 (필요시 조절) */
     }
     .about .title-about {
         font-size: 60px;
@@ -1090,6 +1091,7 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
         width: 100%;
         text-align: center;
         font-size: 24px;
+        margin-bottom: 20px; /* 제목과 콘텐츠 사이 간격 조절 */
     }
     .about .con-wrapper {
         flex-direction: column;
@@ -1097,7 +1099,10 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
     .about .con {
         flex-direction: column; /* 모든 .con을 세로 배열 */
         height: auto; /* 콘텐츠에 따라 높이 조절 */
-        margin-bottom: 20px; /* 항목 간 간격 */
+        margin-bottom: 30px; /* 항목 간 간격 (이전 20px에서 30px로 조정) */
+    }
+    .about .con:last-of-type { /* 마지막 .con 요소의 하단 마진 제거 */
+        margin-bottom: 0;
     }
     .about .con2 {
         flex-direction: column-reverse; /* .con2만 순서 반전 */
@@ -1118,8 +1123,8 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
     .about .circle2,
     .about .circle3 {
         position: static; /* 모바일에서는 플로우에 따라 배치되도록 static으로 변경 */
-        top: auto; /* top, left 속성 제거 */
-        left: auto; /* top, left 속성 제거 */
+        top: auto !important; /* !important 추가하여 데스크톱 absolute 속성 확실히 재정의 */
+        left: auto !important; /* !important 추가하여 데스크톱 absolute 속성 확실히 재정의 */
         
         /* 너비와 높이를 vw 단위로 동일하게 설정하여 1:1 비율 강제 */
         width: 90vw; /* 뷰포트 너비의 90%로 크기 증가 */
@@ -1140,5 +1145,6 @@ display: inline-block; overflow: hidden; font-size: 44px; font-weight: 400; line
 
     .about .button {
         margin-top: 50px;
+        margin-bottom: 50px; /* 버튼 하단에도 여백 추가 (필요시 조절) */
     }
 }
