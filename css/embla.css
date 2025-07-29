@@ -1,0 +1,281 @@
+
+/* ------------0. slide ------------------------- */
+.main-visual.embla {
+  position: relative;
+  /* left:0;  top:0; */
+  max-width: 100%;
+  min-width: 1280px;
+  height: 680px;
+  margin: auto;
+}
+
+/* 그라디언트 border */
+.main-visual.embla::before {
+  content: "";
+  position: absolute;
+  /* z-index: -1; */
+  left: -10px;
+  top: 10px;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  border-bottom-left-radius: 360px;
+  background: linear-gradient(270deg, #F5440F -0.83%, #E81622 49.58%, #594EA2 100%);
+}
+
+.main-visual.embla::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 1px;
+  top: 0;
+  bottom: 10px;
+  right: 0;
+  width: auto;
+  border-bottom-left-radius: 360px;
+  background: #000
+}
+
+/* 슬라이드 contents */
+.main-visual .embla__viewport {
+  overflow: hidden;                 /* viewport벗어나지 않도록, 부분 가리기 */
+  border-bottom-left-radius: 360px;  /* 다시 radius 적용 */
+}
+
+/* 슬라이드 가로 배열 */
+.main-visual .embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  /* 터치 디바이스에서 수직스크롤, 확대/축소를 허용
+  수평스크롤은 embla가 담당하도록 함 */
+}
+
+/* 슬라이드 개별 */
+.main-visual .embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 100%;  /* 각 슬라이드가 100% 차지 */
+  min-width: 0; 
+}
+
+.main-visual .embla__slide__img {
+  display: block;
+  height: 670px;   /* 슬라이드 이미지가 컨테이너 가로 비율은 채우고, 높이는 고정높이*/
+  width: 100%;
+  object-fit: cover;  /* 비율 유지하며 채움 */
+  user-select: none;  /* 이미지 드래그해서 선택 방지 */
+}
+
+/* 슬라이드 제어 요소 (pause / play) */
+.embla__controls {   
+  position: absolute;   bottom: 90px;  right: 18%;/* 슬라이드 하단 우측에 배치 */
+  display: grid;   grid-template-columns: auto 1fr; /* 그리드 형태로 배치 */
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+
+
+.embla__dots {
+  display: flex;   flex-wrap: wrap;  justify-content: flex-end;  /* 우측정렬 */
+  align-items: center;
+  gap: 8px
+}
+
+.embla__dot {
+  display: inline-flex;  align-items: center;  justify-content: center;
+  width: 32px;  height: 32px;
+  cursor: pointer;
+  background: none;  border: 0 none;
+  padding: 0;  margin: 0
+}
+
+.embla__dot:after { 
+  content: '';
+  display: flex;
+  width: 32px;  height: 4px;   /* 직사각형 형태로 만듦 */
+  padding: 0;  margin: 0;
+  background: rgba(255, 255, 255, 0.3);  /* 비활성화된 점은 반투명 흰색 */
+   /* background: rgba(0, 0, 0, 0.3); */
+}
+
+.embla__dot--selected:after { background: #fff; /* 활성화된 점은 흰색*/ }
+
+.sr-only {
+  position: absolute;
+  width: 1px;  height: 1px;
+  padding: 0;  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.embla__play {   /* 재생, 정지 버튼 */
+  display: inline-flex;
+  align-items: center;
+  width: 40px;   height: 40px;
+  background: url(../img/main/icon/icon_slider_play.png);
+  background-size: 40px 40px;
+  cursor: pointer;
+  border: 0 none;
+  font-size: 0;
+  color: transparent;
+  /* z-index : 11; */
+}
+
+.embla__play.stop {
+  background: url(../img/main/icon/icon_slider_stop.png);
+  background-size: 40px 40px;
+}
+
+
+/* ---- */
+
+/* ======================  이미지 슬라이더 ===================== */
+
+/* .brand-slider : 이미지 슬라이더 전체 구조 */
+.brand-slider {
+    display: block;
+    /* position: relative; */
+    position: absolute;
+    left: 50px;
+    left: 50%; transform: translateX(-50%);
+    top: 300px;
+    width: 100vw;
+    max-width: 1974px;
+    
+    margin-top: 100px ;
+
+}
+
+/* embla__viewport : 슬라이더 영역(스크롤될 공간) */
+.brand-slider .embla__viewport {
+    overflow: hidden;
+}
+
+/* .embla__container	슬라이더 안의 이미지들을 담는 flex container */
+.brand-slider .embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(1rem * -2);
+}
+
+/* .embla__slide	각각의 슬라이드 item (총 10개로 반복되어 있음) */
+.brand-slider .embla__slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 370px;
+    min-width: 0;
+    padding-left: 30px;
+}
+
+/* .embla__controls	이전/다음 버튼 영역 */
+.brand-slider .embla__controls {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+/* .embla__button	슬라이드 버튼 (←, →) */
+.brand-slider .embla__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px;
+    pointer-events: none;
+}
+
+.brand-slider .embla__button {
+    width: 80px;
+    height: 80px;
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: auto;
+}
+
+.brand-slider .embla__button:disabled {
+    color: rgb(192, 192, 192);
+}
+
+.brand-slider .embla__button.embla__button--prev {
+    background: rgba(0, 0, 0, 0.6) url('data:image/svg+xml,<svg width="19" height="34" viewBox="0 0 19 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 2L2 17L17 32" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+}
+
+.brand-slider .embla__button.embla__button--next {
+    background: rgba(0, 0, 0, 0.6) url('data:image/svg+xml,<svg width="19" height="34" viewBox="0 0 19 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L17 17L2 32" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+}
+
+.brand-slider .embla__slide__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    user-select: none;
+    transform-origin: top;
+
+    
+}
+
+.brand-slider .embla__slide__number img {
+    display: block;
+    /* height: auto;
+    width: auto; */
+    max-width: 100%;
+    will-change: transform;
+
+    /* 사이즈 맞추기 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-slider .embla__slide__number a {
+    display: block;
+    border-radius: 1.8rem;
+    overflow: hidden;
+
+    /* 사이즈 맞추기 */
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+
+}
+
+
+.brand-slider .embla__slide__number .desc  {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    left: 0;
+    margin: 0;
+    line-height: 1.3;
+    text-align: center;    
+    color: #fff;
+    /* color: #ff6400; */
+    font-size: 18px;
+    font-weight: 400;
+    font-family: CJONLYONE,"Noto Sans KR";
+    opacity: 0;
+    transition: bottom .2s linear, opacity .2s linear;
+
+    /* 추가 */
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);     
+    /* padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 30px; */
+
+    
+    
+}
+
+.brand-slider .is-snapped .embla__slide__number .desc {
+    opacity: 1;
+    bottom: 70px
+}
+

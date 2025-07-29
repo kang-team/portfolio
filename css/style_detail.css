@@ -1,0 +1,10 @@
+* { padding: 0;  margin: 0;}
+.inner { width: 1400px;}
+
+.btns ul { display: flex; justify-content: flex-end;}
+.btns ul li {padding: 10px;}
+
+.top {position: fixed; right:10px; bottom:10px}
+
+
+#footer { margin-top: 0;}
