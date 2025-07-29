@@ -2,9 +2,13 @@
 .inner { width: 1400px;}
 
 .btns ul { display: flex; justify-content: flex-end;}
-.btns ul li {padding: 10px;}
+.btns ul li {padding: 10px;display: inline-block}
 
 .top {position: fixed; right:10px; bottom:10px}
-
-
+.btns li a img {
+  transition: transform 0.3s ease-in-out;
+}
+.btns li a:hover img {
+  transform:scale(1.1);
+}
 #footer { margin-top: 0;}
