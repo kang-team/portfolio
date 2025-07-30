@@ -90,7 +90,9 @@ header nav {
 
 /* 메인 메뉴 */
 header .gnb {
+  /* width: 800px; */
   display: flex;
+  justify-content: space-evenly;
   text-align: center;
   z-index: 100;
 }
@@ -148,7 +150,7 @@ header .submenu li a:hover {
   position: absolute;
   top: 100px; /* header 높이만큼 아래로 */
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 300px;
   background: #fff;
   z-index: 10; 
@@ -302,7 +304,7 @@ header .submenu li a:hover {
   width: 100%;
   height: 1600px;
   text-align: center;
-  background: url("../img/main/bg/bg_about.png") no-repeat left top /cover;
+  background: url("../img/main/bg/bg.png") no-repeat left top /cover;
   position: relative;
 }
 
@@ -546,7 +548,7 @@ header .submenu li a:hover {
   width: 100%;
   height: 1000px;
   text-align: center;
-  background: url("../img/main/bg/bg_about.png") no-repeat center/cover;
+  background: url("../img/main/bg/bg.png") no-repeat center/cover;
   position: relative;
 }
 
@@ -636,7 +638,7 @@ header .submenu li a:hover {
   width: 100%;
   height: 868px;
   text-align: center;
-  background: url("../img/main/bg/bg_about.png") no-repeat center/cover;
+  background: url("../img/main/bg/bg.png") no-repeat center/cover;
 }
 
 .news .cons {
@@ -814,5 +816,5 @@ footer .foot-area02 .family {
   float: left;
 }
 
-#footer { margin-top: 0;}
+footer { margin-top: 0;}
 .top {position: fixed; right:10px; bottom:10px}
