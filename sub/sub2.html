@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Page</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="../assets/css/main-detail.css">  
+</head>
+<body>
+<body>
+    <!-- 제공해주신 HTML 코드와 CSS를 결합합니다. -->
+    <div class="container">
+        <div id="web2" class="detail-view active">
+            <header class="detail-header">
+                <h2 class="detail-title">Mobile Page</h2>
+
+                <!-- 뒤로가기 버튼은 다른 페이지로 이동하는 링크 대신, 상세 페이지를 숨기는 함수를 호출하도록 변경합니다. -->
+                <a href="../index.html#portfolio" class="back-button">← 돌아가기</a>
+                <a href="../index.html#portfolio" class="fixed-back">← 돌아가기</a>
+                <a href="#" class="scroll-top">top</a>
+            </header>
+
+            <img src="svg/mobile.svg" class="detail" alt="">
+            <img src="svg/mobile2.svg" class="detail" alt="">
+            <img src="svg/mobile3.svg" class="detail" alt="">
+
+        
+        </div>
+    </div>
+<script>
+  window.addEventListener('scroll', function () {
+    // 돌아가기 버튼 제어
+    const topButton = document.querySelector('.back-button');
+    const fixedButton = document.querySelector('.fixed-back');
+    const rect = topButton.getBoundingClientRect();
+
+    if (rect.bottom < 0) {
+      fixedButton.classList.add('show');
+    } else {
+      fixedButton.classList.remove('show');
+    }
+
+    // 위로 가기 버튼 제어
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  });
+
+  // 위로 가기 버튼 클릭 시 부드럽게 스크롤
+  document.querySelector('.scroll-top').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+</body>
+</html>
