@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -77,3 +78,84 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Samyang Food Renew</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="../assets/css/main-detail.css">  
+</head>
+<body>
+<body>
+    <!-- 제공해주신 HTML 코드와 CSS를 결합합니다. -->
+    <div class="container">
+        <div id="web2" class="detail-view active">
+            <header class="detail-header">
+                <h2 class="detail-title">Samyang Food Renew</h2>
+
+                <!-- 뒤로가기 버튼은 다른 페이지로 이동하는 링크 대신, 상세 페이지를 숨기는 함수를 호출하도록 변경합니다. -->
+                <a href="../index.html#portfolio" class="back-button">← 돌아가기</a>
+                <a href="../index.html#portfolio" class="fixed-back">← 돌아가기</a>
+                <a href="#" class="scroll-top">top</a>
+            </header>
+            <!-- <main class="detail-content"> -->
+              <h3>리뉴얼 홈페이지 click </h3> <br>
+              <p> DESKTOP에서 최적화 (반응형으로 수정중) <br> 브랜드소개 > #Noodle 하단 > Noodle버튼 누르면 > sub페이지로 연결됨 <br>
+              </p>
+              <br>
+              <p>
+                <a href="https://kang-team.github.io/home/" target="_blank">
+                  https://kang-team.github.io/home/
+                </a>
+              </p>
+              <br>
+            <!-- </main> -->
+
+            <img src="svg/page4.svg" class="detail" alt="">
+            <img src="svg/page5.svg" class="detail" alt="">
+            <img src="svg/page6.svg" class="detail" alt="">
+            <img src="svg/page7.svg" class="detail" alt="">
+            <img src="svg/page8.svg" class="detail" alt="">
+            <img src="svg/page9.svg" class="detail" alt="">
+            <img src="svg/page10.svg" class="detail" alt="">                        
+            <img src="svg/page11.svg" class="detail" alt="">
+        
+        </div>
+    </div>
+<script>
+  window.addEventListener('scroll', function () {
+    // 돌아가기 버튼 제어
+    const topButton = document.querySelector('.back-button');
+    const fixedButton = document.querySelector('.fixed-back');
+    const rect = topButton.getBoundingClientRect();
+
+    if (rect.bottom < 0) {
+      fixedButton.classList.add('show');
+    } else {
+      fixedButton.classList.remove('show');
+    }
+
+    // 위로 가기 버튼 제어
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  });
+
+  // 위로 가기 버튼 클릭 시 부드럽게 스크롤
+  document.querySelector('.scroll-top').addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+</body>
+</html>
+>>>>>>> 6dc3ba811f8dcf2aed4a87291bf0f5a57399a83b
