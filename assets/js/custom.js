@@ -79,7 +79,7 @@ $(document).ready(function(){
 	
 		// i. client (carousel)
 		
-			$('#certificates').owlCarousel({
+			$('#cert').owlCarousel({
 				items:6,
 				loop:true,
 				smartSpeed: 1000,
