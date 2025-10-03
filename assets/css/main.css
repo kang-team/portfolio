@@ -1213,6 +1213,75 @@ span.single-timeline-horizontal {
     color: #636a82;
 }
 
+
+
+
+/*  */
+
+.study {
+    padding: 50px 0 100px;
+    border-top: 1px solid #e5ebf2;
+    background: #f9fbfd;
+}
+
+.study-content {
+    padding-top: 100px;
+}
+
+.study-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.study .item {
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 25px;
+    min-width: 280px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+.study .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.study .item .title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3c4258;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.study .item .description {
+    font-size: 14px;
+    color: #999fb3;
+    line-height: 1.6;
+}
+
+.study .item .description .date {
+    /* color: #d92cf9; */
+    color: #999fb3;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.study .item .description .issuer {
+    color: #636a82;
+}
+
+
+
 @media (max-width: 768px) {
     .certificates-list {
         gap: 20px;
