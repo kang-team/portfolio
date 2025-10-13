@@ -52,7 +52,7 @@ $(document).ready(function(){
 		
 		$('body').scrollspy({
 			target:'.navbar-collapse',
-			offset:0
+			offset:50
 		});
 
 	// 3. Progress-bar
