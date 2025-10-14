@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Slider</title>
+  
+  <!-- 12은 웹컴포넌트용 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script> -->
+  <!-- 11이 클래스용 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  Swiper.js를 사용
+<br>
+  1. swiper.js 사이트 https://swiperjs.com/
+  <br>
+  2. 사용 태그 (Default)
+  <br>
+  (1) swiper-container - main Swiper element where you define all parameters
+  <br>
+  (2) swiper-slide - Swiper slide element
+  <br>
+  3.속성 
+  <ol>
+  <li> navigation="true" <> 표시</li>
+  <li> Pagination="true" 하단 페이지 ㅇ 표시 (슬라이드 수만큼의 bullet)</li>
+  <li> pagination-dynamic-bullets : 활성 bullet이 커지고, 나머지는 작아지거나 사라짐</li>
+  <li> pagination-type="progressbar" : 상단 진행바</li>
+  <li> pagination-type="fraction" : n/total</li>
+  <li> custom : init="false" 후, 자바스크립트로 커스터마이징</li>
+  <li> scrollbar-hide="true"</li>
+  <li> direction="vertical" 위아래 슬라이드</li>
+  <li> pagination-clickable="true" : Pagination 클릭으로 이동</li>
+  <li> -> 2~ bullet중 하나만 적용</li>
+  <li> spacebetween : spaceBetween은 클래식 방식에서 적용
+     https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"</li>
+  <li>space-between : 컴포넌트 방식에서 적용
+    https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js
+  </li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  </ol>
+  <!-- navigation="true"    -->
+  <!-- pagination-dynamic-bullets="true"  -->
+  <!-- pagination-type=progressbar  -->
+   <!-- pagination-type="fraction" -->
+    <!-- scrollbar-hide="true" -->
+ <!-- init="false"     -->
+   <!-- direction="vertical" -->
+     <!-- pagination-clickable="true" -->
+      <!-- pagination = "true" -->
+<!-- <swiper-container
+  space-between="30"
+  pagination="true"
+  pagination-clickable="true"
+>
+   <swiper-slide>Slide 1</swiper-slide>
+  <swiper-slide>Slide 2</swiper-slide>
+  <swiper-slide>Slide 3</swiper-slide>
+  <swiper-slide>Slide 4</swiper-slide>
+  <swiper-slide>Slide 5</swiper-slide>
+  <swiper-slide>Slide 6</swiper-slide>
+ </swiper-container> -->
+
+  <!-- Swiper -->
+   <!-- spacebeteen -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>a
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+  <script>
+     // spaceBetween-클래스용
+        var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    /* custom 
+    const swiperEl = document.querySelector('swiper-container')
+
+    const params = {
+      injectStyles: [`
+      .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #007aff;
+      }
+      `],
+      pagination: {
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+    }
+
+    Object.assign(swiperEl, params)
+
+    swiperEl.initialize();
+    */
+
+  </script>
+</body>
+</html>

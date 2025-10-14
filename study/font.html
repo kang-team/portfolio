@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FONT - 한글 폰트 가이드</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/font.css">
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .aside-menu {
+        min-height: 100vh; 
+        background-color: #343a40; 
+        color: white;
+        padding-top: 20px;
+        position: fixed; 
+        top: 0;          
+        left: 0;         
+        z-index: 1030;
+        overflow-y: auto;
+    }
+
+    .main-content {
+        margin-left: 16.6667%; 
+        width: 83.3333%; 
+    }
+    
+    @media (max-width: 767.98px) {
+        .main-content {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    .aside-menu .nav-link:hover {
+        color: #17a2b8 !important;
+        padding-left: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .aside-menu .nav-link.active {
+        color: #17a2b8 !important;
+        font-weight: bold;
+        padding-left: 0.5rem;
+        border-left: 3px solid #17a2b8;
+    }
+
+    section {
+        scroll-margin-top: 20px;
+    }
+
+    .font-badge {
+        display: inline-block;
+        padding: 0.35rem 0.65rem;
+        margin: 0.25rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+    }
+
+
+  /* font  */
+.font-SchoolSafetyDinosaurEgg {
+    font-family: 'SchoolSafetyDinosaurEgg', sans-serif;
+}
+
+/* 그림일기 */
+.font-SchoolSafetyPictureDiary {
+     font-family: 'SchoolSafetyPictureDiary', sans-serif;
+}
+
+/* 별빛마을 */
+.font-SchoolSafetyStarrySky300 {
+       font-family: 'SchoolSafetyStarrySky', sans-serif;
+       font-weight: 300;
+}
+
+.font-SchoolSafetyStarrySky700 {
+       font-family: 'SchoolSafetyStarrySky', sans-serif;
+       font-weight: 700;
+}
+
+/* 페이퍼로지(11종) */
+.font-Paperozi100 {
+       font-family: 'Paperozi', sans-serif;
+       font-weight: 100;
+}
+.font-Paperozi900 {
+       font-family: 'Paperozi', sans-serif;
+       font-weight: 900;
+}
+
+/* 프리젠테이션(9종) */
+.font-Presentation00 {
+       font-family: 'Presentation', sans-serif;
+       font-weight: 100;
+}
+.font-Presentation900 {
+       font-family: 'Presentation', sans-serif;
+       font-weight: 900;
+}
+
+/* 둥근미소2종 */
+.font-SchoolSafetyRoundedSmile400 {
+       font-family: 'SchoolSafetyRoundedSmile', sans-serif;
+       font-weight: 400;
+}
+.font-SchoolSafetyRoundedSmile700 {
+       font-family: 'SchoolSafetyRoundedSmile', sans-serif;
+       font-weight: 700;
+}
+
+/* 가을소풍2종 */
+.font-SchoolSafeAutumnTrip300 {
+       font-family: 'SchoolSafeAutumnTrip', sans-serif;
+       font-weight: 300;
+}
+.font-SchoolSafeAutumnTrip700 {
+       font-family: 'SchoolSafeAutumnTrip', sans-serif;
+       font-weight: 700;
+}
+
+
+.example-code {
+    /* 좌측 들여쓰기 추가 (본문보다 안쪽으로 밀어 넣기) */
+    padding: 15px; 
+    
+    /* 본문과 구분되는 배경색 추가 */
+    background-color: #f8f9fa; /* Bootstrap의 밝은 회색 계열 */
+    
+    /* 선택 사항: 둥근 모서리 추가 */
+    border-radius: 5px; 
+    
+    /* 위쪽 마진 추가 (윗 문단과의 간격 확보) */
+    margin-top: 20px !important;
+    
+    /* 코드 폰트 적용 (가독성 높은 monospace 폰트) */
+    font-family: monospace, sans-serif; 
+    
+    /* 선택 사항: 글자 크기를 살짝 줄여서 부각 */
+    font-size: 0.9em; 
+}
+</style>
+</head>
+<body>
+    <div class="row g-0">
+        
+        <aside class="col-md-2 aside-menu d-none d-md-block">
+            <div class="px-3">
+                <h4 class="text-info mb-4">폰트 목차</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <a href="#section-license" class="nav-link text-white-50 p-0 menu-link active">1. 라이선스</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#section-gothic" class="nav-link text-white-50 p-0 menu-link">2. 고딕체</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#section-serif" class="nav-link text-white-50 p-0 menu-link">3. 명조/바탕체</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#section-handwriting" class="nav-link text-white-50 p-0 menu-link">4. 손글씨/붓글씨</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#section-special" class="nav-link text-white-50 p-0 menu-link">5. 특수/장식</a>
+                    </li>
+                    <li class="nav-item mb-2">
+                        <a href="#section-tips" class="nav-link text-white-50 p-0 menu-link">6. 디자인 팁</a>
+                    </li>
+                </ul>
+                <div class="mt-5 pt-3 border-top">
+                    <p class="small text-white-50">한글 폰트 가이드</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="col-md-10 main-content">
+            <div class="container py-5">
+                <header class="mb-5 text-center">
+                    <h1 class="display-4 fw-bold text-dark">한글 폰트 가이드</h1>
+                    <p class="text-secondary">무료 한글 폰트 모음</p>
+                </header>
+
+
+
+                <section class="mb-5" id="section-license">
+                  <h2 class="h4 text-dark mb-3 fw-bold">폰트 정의(준비)하는 법</h2>                
+
+                  <div class="card mb-4 shadow-sm">
+                      <div class="card-header bg-dark text-white">1. LINK 태그</div>
+                      <div class="card-body">
+                      <p class="mb-3">link 태그 사용, 다운로드 필요X, CDN방식(ex.구글폰트)</p>
+                      <p>적용위치 : head태그 내부</p>
+                      <p>장점: 브라우저가 CSS보다 폰트 파일을 먼저 로드하여 FOUC(Flash of Unstyled Content) 최소화</p>
+
+                      <pre class="example-code">
+                        <code>
+&lthead&gt  
+  &ltlink href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet"&gt
+&lt/head>
+                        </code>
+                      </pre>                              
+                                                
+                      </div>
+                  </div>
+
+                  <div class="card mb-4 shadow-sm">
+                      <div class="card-header bg-dark text-white">2. @import</div>
+                      <div class="card-body">
+                      <p class="mb-3">@import 사용, 다운로드 필요X, CDN방식(ex.구글폰트)</p>
+                      <p>적용위치 : css 파일 최상단</p>
+                      <p>단점: CSS 파일이 모두 로드된 후 폰트 로드가 시작되어 속도가 느릴 수 있음</p>
+                      <pre class="example-code">
+                        <code>
+/* CSS 파일 최상단 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+                        </code>
+                      </pre>                              
+                          
+                      </div>
+                  </div>                
+
+                  <div class="card mb-4 shadow-sm">
+                      <div class="card-header bg-dark text-white">3. @font-face</div>
+                      <div class="card-body">
+                      <p class="mb-3">@font-face 사용, 다운로드 필요함. 보통 woff2사용 (구버전 호환위해 woff 사용하기도함)</p>
+
+
+                      <pre class="example-code">
+                        <code>
+@font-face {
+  font-family: '학교안심 물결';
+  src: url('fonts/SchoolSafe-Mulgyeol.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+                        </code>
+                      </pre>                      
+                      </div>
+                  </div>                                  
+                </section>
+
+                <section class="mb-5" id="section-license">
+                  <h2 class="h4 text-dark mb-3 fw-bold">폰트 적용하는 법</h2>                
+
+                  <div class="card mb-4 shadow-sm">
+                      <div class="card-header bg-dark text-white">font-family로 적용</div>
+                      <div class="card-body">
+                      <p class="mb-3">font-family 태그 사용</p>
+                      <pre class="example-code">
+                        <code>
+  /* 1. 불러온 웹 폰트 이름 */
+  font-family: 'Noto Sans KR', 
+  /* 2. 대체 폰트(fallback): 웹 폰트 로드 실패 시 사용 */
+  sans-serif;                 
+                      </code>      
+                      </pre>
+                      </div>
+                  </div>
+              
+                </section>
+
+                <section class="mb-5" id="section-license">
+                  <h2 class="h4 text-dark mb-3 fw-bold">폰트 두께 </h2>                
+
+                  <div class="card mb-4 shadow-sm">
+                      <div class="card-header bg-dark text-white">font-weight : 숫자와 영문</div>
+                      <div class="card-body">
+                      <p class="mb-3"> 숫자, 영문 둘다 사용 가능
+                        <table class="table table-bordered table-striped table-hover">
+                          <thead class="table-dark">
+                            <tr>
+                              <th>숫자 값</th>
+                              <th>키워드 이름</th>
+                              <th>설명</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>100</td>
+                              <td>Thin</td>
+                              <td>매우 얇은 글씨</td>
+                            </tr>
+                            <tr>
+                              <td>200</td>
+                              <td>Extra Light (Ultra Light)</td>
+                              <td>얇은 글씨</td>
+                            </tr>
+                            <tr>
+                              <td>300</td>
+                              <td>Light</td>
+                              <td>보통보다 얇음</td>
+                            </tr>
+                            <tr>
+                              <td>400</td>
+                              <td><strong>Normal</strong> (Regular)</td>
+                              <td>기본 굵기 (기본값)</td>
+                            </tr>
+                            <tr>
+                              <td>500</td>
+                              <td>Medium</td>
+                              <td>약간 두꺼움</td>
+                            </tr>
+                            <tr>
+                              <td>600</td>
+                              <td>Semi Bold (Demi Bold)</td>
+                              <td>보통보다 두꺼움</td>
+                            </tr>
+                            <tr>
+                              <td>700</td>
+                              <td><strong>Bold</strong></td>
+                              <td>굵은 글씨</td>
+                            </tr>
+                            <tr>
+                              <td>800</td>
+                              <td>Extra Bold (Ultra Bold)</td>
+                              <td>매우 굵음</td>
+                            </tr>
+                            <tr>
+                              <td>900</td>
+                              <td>Black (Heavy)</td>
+                              <td>가장 굵은 글씨</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+
+                      </p>
+                      </div>
+                  </div>
+
+           
+                </section>                
+
+
+
+                <section class="mb-5" id="section-license">
+                    <h2 class="h4 text-dark mb-3 fw-bold">폰트 소개</h2>
+                    <h2 class="h4 text-dark mb-3 fw-bold">1. 학교안심폰트</h2>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">1-1. 학교안심 폰트 (OFL)</div>
+                        <div class="card-body">
+                            <p class="mb-3"><strong>출처:</strong> <a href="https://copyright.keris.or.kr/wft/fntDwnld" target="_blank" class="text-decoration-none">한국교육학술정보원</a></p>
+                            <div class="alert alert-info mb-0">
+                                <strong>OFL (Open Font License):</strong> 개인/상업용 무료, 수정 및 배포 가능
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white">1-2. 종류 몇가지</div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-info">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-info">학교안심 공룡알</h6>
+                                            <p class="card-text small font-SchoolSafetyDinosaurEgg">학교안심 공룡알</p>
+                                            <p class="card-text small font-SchoolSafetyDinosaurEgg">HakgyoAnsimGongryongal </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-primary">학교안심 그림일기</h6>
+                                            <p class="card-text small font-SchoolSafetyPictureDiary">학교안심 그림일기</p>
+                                            <p class="card-text small font-SchoolSafetyPictureDiary">Hakgyoansim Geurimilgi </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-warning">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-warning">별빛하늘(2종)</h6>
+                                            <p class="card-text small font-SchoolSafetyStarrySky300">학교안심 별빛하늘300</p>
+                                            <p class="card-text small font-SchoolSafetyStarrySky300">Byeolbichhaneul light</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-warning">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-warning">별빛하늘(2종)</h6>
+                                            <p class="card-text small font-SchoolSafetyStarrySky700">학교안심 별빛하늘700</p>
+                                            <p class="card-text small font-SchoolSafetyStarrySky700">Byeolbichhaneul bold</p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                          </div>
+
+                         <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-success">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-success">페이퍼로지(11종)</h6>
+                                            <p class="card-text small font-Paperozi100">페이퍼로지100</p>
+                                            <p class="card-text small font-Paperozi100">Paperlogy thin</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-success">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-success">페이퍼로지(11종)</h6>
+                                            <p class="card-text small font-Paperozi900">페이퍼로지900</p>
+                                            <p class="card-text small font-Paperozi900">Paperlogy black</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-danger">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-danger">프리젠테이션(9종)</h6>
+                                            <p class="card-text small font-Presentation100">프리젠테이션100</p>
+                                            <p class="card-text small font-Presentation100">Freesentation thin </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-danger">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-danger">프리젠테이션(9종)</h6>
+                                            <p class="card-text small font-Presentation900">프리젠테이션900</p>
+                                            <p class="card-text small font-Presentation900">Freesentation black </p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                          </div>
+
+                          
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-primary">둥근미소(2종)</h6>
+                                            <p class="card-text small font-SchoolSafetyRoundedSmile400">학교안심 둥근미소400</p>
+                                            <p class="card-text small font-SchoolSafetyRoundedSmile400">Dunggeunmiso regular </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-primary">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-primary">둥근미소(2종)</h6>
+                                            <p class="card-text small font-SchoolSafetyRoundedSmile700">학교안심 둥근미소700</p>
+                                            <p class="card-text small font-SchoolSafetyRoundedSmile700">Dunggeunmiso black </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-warning">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-warning">가을소풍(2종)</h6>
+                                            <p class="card-text small font-SchoolSafeAutumnTrip300">학교안심 가을소풍300</p>
+                                            <p class="card-text small font-SchoolSafeAutumnTrip300">HakgyoansimGaeulsopung light</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card h-100 border-warning">
+                                        <div class="card-body">
+                                            <h6 class="card-title text-warning">가을소풍(2종)</h6>
+                                            <p class="card-text small font-SchoolSafeAutumnTrip700">학교안심 가을소풍700</p>
+                                            <p class="card-text small font-SchoolSafeAutumnTrip700">HakgyoansimGaeulsopung bold</p>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>
+                          </div>
+                          
+                    </div>
+                </section>
+
+                <hr class="my-5">
+
+                <section class="mb-5" id="section-gothic">
+                    <h2 class="h4 text-dark mb-3 fw-bold">2. 고딕체</h2>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">2-1. 기본 고딕체</div>
+                        <div class="card-body">
+                            <h6 class="text-dark mb-3">프리텐다드 (Pretendard)</h6>
+                            <p class="small text-secondary mb-3">가장 널리 사용되는 범용 고딕체</p>
+                            
+                            <h6 class="text-dark mb-3">한화고딕 (5종)</h6>
+                            <p class="small text-secondary mb-0">Light, Regular, Medium, Bold, Heavy</p>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">2-2. 변형 고딕체</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <span class="font-badge bg-light border">구미첨단산업</span>
+                                <span class="font-badge bg-light border">강원특별자치도</span>
+                                <span class="font-badge bg-light border">태백은하수 (얇음)</span>
+                                <span class="font-badge bg-light border">스스로넷 (얇음)</span>
+                            </div>
+                            <div class="mb-3">
+                                <span class="font-badge bg-light border">한국기계연구원 (2종)</span>
+                                <span class="font-badge bg-light border">상주곶감체 (두꺼움)</span>
+                                <span class="font-badge bg-light border">강한육군 (4종, 모음 바람뾰족)</span>
+                            </div>
+                            <div>
+                                <span class="font-badge bg-light border">현대해상 마음체 (2종)</span>
+                                <span class="font-badge bg-light border">현대해상 고딕체 (4종)</span>
+                                <span class="font-badge bg-light border">롯데마트 행복체 (2종, ㅡ 위로 둥글게)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">2-3. 긴 고딕체 (Condensed)</div>
+                        <div class="card-body">
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="font-badge bg-secondary text-white">굿네이버스 좋은이웃체 (2종)</span>
+                                <span class="font-badge bg-secondary text-white">휴먼범석 (얇음)</span>
+                                <span class="font-badge bg-secondary text-white">양진체</span>
+                                <span class="font-badge bg-secondary text-white">EBS 훈민정음 새론체 (가로 긴)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">2-4. 둥근 고딕체</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6 class="text-dark">부드러운 느낌</h6>
+                                <span class="font-badge bg-light border">KCC 갤판체</span>
+                                <span class="font-badge bg-light border">국민연금체 (중간~두꺼움)</span>
+                                <span class="font-badge bg-light border">한컴 말랑말랑 (2종)</span>
+                            </div>
+                            <div class="mb-3">
+                                <span class="font-badge bg-light border">카페24 서라운드</span>
+                                <span class="font-badge bg-light border">IM 혜민체 (2종)</span>
+                                <span class="font-badge bg-light border">티머니 둥근바람</span>
+                            </div>
+                            <div>
+                                <span class="font-badge bg-light border">코레일 둥근고딕 (3종)</span>
+                                <span class="font-badge bg-light border">배찌체 (둥글)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white">2-5. 특수 고딕체</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6 class="text-dark">별 모양</h6>
+                                <span class="font-badge bg-warning text-dark">학교안심 별빛 하늘 (2종)</span>
+                            </div>
+                            <div class="mb-3">
+                                <h6 class="text-dark">비트/픽셀</h6>
+                                <span class="font-badge bg-info text-white">던파 비트체 (두꺼움)</span>
+                                <span class="font-badge bg-info text-white">갈무리 (1종, 9, 7, 11, 얇음)</span>
+                            </div>
+                            <div>
+                                <h6 class="text-dark">산세리프</h6>
+                                <span class="font-badge bg-light border">알리바바산스 (3종, 깔끔과 귀여움)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-5">
+
+                <section class="mb-5" id="section-serif">
+                    <h2 class="h4 text-dark mb-3 fw-bold">3. 명조/바탕체 (Serif)</h2>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">3-1. 기본 명조/바탕체</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6 class="text-dark">학교안심 시리즈</h6>
+                                <span class="font-badge bg-light border">학교안심 산뜻 바탕 (2종)</span>
+                                <span class="font-badge bg-light border">순바탕 (3종)</span>
+                            </div>
+                            <div class="mb-3">
+                                <h6 class="text-dark">기본 세리프</h6>
+                                <span class="font-badge bg-light border">Noto Serif KR</span>
+                                <span class="font-badge bg-light border">국립박물관 문화재단</span>
+                                <span class="font-badge bg-light border">감탄로드 돋움 (3종)</span>
+                            </div>
+                            <div class="mb-3">
+                                <span class="font-badge bg-light border">가평 한석봉</span>
+                                <span class="font-badge bg-light border">속초바다</span>
+                                <span class="font-badge bg-light border">정림사지 (2종)</span>
+                                <span class="font-badge bg-light border">마루부리 (5종)</span>
+                            </div>
+                            <div>
+                                <span class="font-badge bg-light border">오르빗 (얇음)</span>
+                                <span class="font-badge bg-light border">카페24 심플해 (얇음)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white">3-2. 변형 세리프체</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <span class="font-badge bg-light border">영주 풍기인삼체</span>
+                                <span class="font-badge bg-light border">땅스부대찌개 (3종)</span>
+                                <span class="font-badge bg-light border">능소화 (매우 가늘음)</span>
+                            </div>
+                            <div>
+                                <span class="font-badge bg-light border">가비아 청연체</span>
+                                <span class="font-badge bg-light border">가비아 마음결체</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-5">
+
+                <section class="mb-5" id="section-handwriting">
+                    <h2 class="h4 text-dark mb-3 fw-bold">4. 손글씨/붓글씨</h2>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">4-1. 얇은 필기체</div>
+                        <div class="card-body">
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="font-badge bg-light border">안동 이육사</span>
+                                <span class="font-badge bg-light border">KCC 혜림</span>
+                                <span class="font-badge bg-light border">신동엽 손글씨</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">4-2. 붓글씨/서예체</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6 class="text-dark">깔끔한 붓글씨</h6>
+                                <span class="font-badge bg-light border">동극체</span>
+                                <span class="font-badge bg-light border">츄사사랑체</span>
+                                <span class="font-badge bg-light border">슈성혜정체</span>
+                            </div>
+                            <div class="mb-3">
+                                <h6 class="text-dark">필기/흘림체</h6>
+                                <span class="font-badge bg-light border">덕온공주체</span>
+                                <span class="font-badge bg-light border">한글 재민체</span>
+                                <span class="font-badge bg-light border">솔뫼 김대건체 (2종, 흘림)</span>
+                            </div>
+                            <div>
+                                <h6 class="text-dark">특수</h6>
+                                <span class="font-badge bg-light border">한컴 훈민정음 가로쓰기 (오→점으로)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white">4-3. 손글씨 시리즈</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6 class="text-dark">학교안심 시리즈</h6>
+                                <span class="font-badge bg-light border">물결 (2종)</span>
+                                <span class="font-badge bg-light border">HandJet</span>
+                            </div>
+                            <div class="mb-3">
+                                <span class="font-badge bg-light border">나눔손글씨</span>
+                                <span class="font-badge bg-light border">완도체</span>
+                                <span class="font-badge bg-light border">Sandoll</span>
+                            </div>
+                            <div class="mb-3">
+                                <span class="font-badge bg-light border">한림명조 (2종)</span>
+                                <span class="font-badge bg-light border">한림고딕체 (3종)</span>
+                            </div>
+                            <div class="mb-3">
+                                <span class="font-badge bg-light border">Seoul 색동저고리 (2종)</span>
+                                <span class="font-badge bg-light border">마비옛체 (ㄹ이 z)</span>
+                                <span class="font-badge bg-light border">산토끼체</span>
+                            </div>
+                            <div>
+                                <span class="font-badge bg-light border">소요단풍체 (2종)</span>
+                                <span class="font-badge bg-light border">카페24 클래식</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-5">
+
+                <section class="mb-5" id="section-special">
+                    <h2 class="h4 text-dark mb-3 fw-bold">5. 특수/장식 폰트</h2>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">5-1. 귀여운 폰트</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <span class="font-badge bg-danger text-white">쿠키런 (3종)</span>
+                                <span class="font-badge bg-danger text-white">Cafe24 Deco Shadow</span>
+                                <span class="font-badge bg-danger text-white">카페24 동동</span>
+                            </div>
+                            <div>
+                                <span class="font-badge bg-danger text-white">동그라미쟈당 (3종)</span>
+                                <span class="font-badge bg-danger text-white">어비류가체 (2종)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">5-2. 디자인 특화 폰트</div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6 class="text-dark">도형/기하학</h6>
+                                <span class="font-badge bg-light border">고령딸기 (두껍고 점)</span>
+                                <span class="font-badge bg-light border">Mapo 홍대프리덤 (네모 구성)</span>
+                            </div>
+                            <div class="mb-3">
+                                <h6 class="text-dark">특수 효과</h6>
+                                <span class="font-badge bg-light border">Rubik Beastly (가시)</span>
+                                <span class="font-badge bg-light border">HS 여름물빛체 (높이 다름)</span>
+                            </div>
+                            <div>
+                                <h6 class="text-dark">기타</h6>
+                                <span class="font-badge bg-light border">양특수 첫소리고딕</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white">5-3. OFL 추천 폰트</div>
+                        <div class="card-body">
+                            <div class="alert alert-success">
+                                <strong>상업용 무료 + 수정/배포 가능</strong>
+                            </div>
+                            <div class="mb-3">
+                                <span class="font-badge bg-success text-white">촵땡겨체</span>
+                                <span class="font-badge bg-success text-white">창원단감체</span>
+                                <span class="font-badge bg-success text-white">평화평창</span>
+                            </div>
+                            <div class="mb-3">
+                                <span class="font-badge bg-success text-white">기후위기</span>
+                                <span class="font-badge bg-success text-white">둥켈산스</span>
+                            </div>
+                            <div>
+                                <span class="font-badge bg-success text-white">Roboto</span>
+                                <span class="font-badge bg-success text-white">배달의민족 도현</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="section-tips">
+                    <h2 class="h4 text-dark mb-3 fw-bold">6. 디자인 팁 (Illustrator/Photoshop)</h2>
+                    
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">6-1. 3D 효과 & 후처리</div>
+                        <div class="card-body">
+                            <h6 class="text-dark mb-3">3D 효과 후 작업</h6>
+                            <ol class="mb-0">
+                                <li class="mb-2"><strong>Expand (확장)</strong> - 3D 효과를 실제 오브젝트로 변환</li>
+                                <li class="mb-2"><strong>Image Trace (이미지 추적)</strong> - 래스터를 벡터로 변환</li>
+                                <li><strong>다듬기</strong> - Smooth Tool로 부드럽게, Dodge Tool로 명암 조절</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-dark text-white">6-2. 글자 효과 (Appearance 패널)</div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h6 class="text-dark">📌 긴 그림자 효과</h6>
+                                <p class="small text-secondary mb-2">모양 탭 → 글자 내용 변경 가능</p>
+                                <div class="alert alert-light border mb-0">
+                                    <strong>방법:</strong> 글자 색 위/아래에 칠(Fill) 추가
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h6 class="text-dark">📌 외곽선 효과</h6>
+                                <div class="alert alert-light border mb-0">
+                                    <strong>방법:</strong> 아래에 칠(Fill) 추가
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h6 class="text-dark">📌 구름 모양 글자</h6>
+                                <div class="alert alert-light border mb-0">
+                                    <strong>방법:</strong> 연필 툴(Pencil Tool)로 둥글둥글 표시
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-dark text-white">6-3. 작업 흐름 요약</div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="card bg-light h-100">
+                                        <div class="card-body">
+                                            <h6 class="card-title">1️⃣ 기본 작업</h6>
+                                            <ul class="small mb-0">
+                                                <li>폰트 선택</li>
+                                                <li>크기/색상 설정</li>
+                                                <li>배치 조정</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bg-light h-100">
+                                        <div class="card-body">
+                                            <h6 class="card-title">2️⃣ 효과 적용</h6>
+                                            <ul class="small mb-0">
+                                                <li>3D 효과</li>
+                                                <li>그림자/외곽선</li>
+                                                <li>질감 추가</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bg-light h-100">
+                                        <div class="card-body">
+                                            <h6 class="card-title">3️⃣ 마무리</h6>
+                                            <ul class="small mb-0">
+                                                <li>Expand로 확장</li>
+                                                <li>Smooth로 다듬기</li>
+                                                <li>최종 조정</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="text-center mt-5 pt-5">
+                    <a href="#" class="btn btn-outline-secondary">⬆️ 맨 위로</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const menuLinks = document.querySelectorAll('.menu-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            menuLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
