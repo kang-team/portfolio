@@ -12,7 +12,7 @@
         rel="stylesheet">
 
     <!-- Title -->
-    <title>Hyerin-웹 & UI/UX 디자이너</title>
+    <title>Hyerin - 웹 & UI/UX 디자이너</title>
 
     <!-- Favicon -->
     <!-- <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"> -->
@@ -55,6 +55,7 @@
                             <li class="smooth-menu"><a href="#skills">Skills</a></li>
                             <li class="smooth-menu"><a href="#portfolio">Portfolio</a></li>
                             <li class="smooth-menu"><a href="#certificates">Certificates</a></li>
+                            <li class="smooth-menu"><a href="#study">Study</a></li>                            
                         </ul>
                     </div>
                 </div>
@@ -250,6 +251,7 @@
             </div>
         </div>
     </section>
+
     <!-- Education Section -->
     <section id="education" class="education">
         <div class="section-heading text-center">
@@ -527,7 +529,7 @@
         </div>
     </section>
 
-   <!-- Certificates Section -->
+    <!-- Certificates Section -->
     <section id="certificates" class="certificates">
         <div class="section-heading text-center">
             <h2>Certificates</h2>
@@ -589,6 +591,127 @@
     </section>
     <!--certificates end -->
 
+
+    <!-- Study Section -->
+    <section id="study" class="study">
+        <div class="section-heading text-center">
+            <h2>Study</h2>
+        </div>
+        <div class="container">
+            <div class="study-content">
+                <div class="study-list">
+
+                    <a href="./study/font.html">
+                        <div class="item">
+                            <h4 class="title">Font </h4>
+                            <p class="description">
+                                <span class="date">google font</span>
+                                <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                            </p>                        
+                        </div>
+                    </a>
+                    <a href="./study/bootstrap.html">
+                    <div class="item">
+                        <h4 class="title">BootsStrap</h4>
+                        <p class="description">
+                            <span class="date">Grid, Modal</span>
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>                        
+                    </div>       
+                    </a>
+
+
+                    <div class="item">
+                        <h4 class="title">HTML</h4>
+                        <p class="description">
+                            <span class="date">Table</span>
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>             
+                    </div>
+
+                    <div class="item">
+                        <h4 class="title">CSS</h4>
+                        <p class="description">
+                            <span class="date">Flex, Grid</span>
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>                        
+                    </div>   
+
+                    <div class="item">
+                        <h4 class="title">CSS</h4>
+                        <p class="description">
+                            <span class="date">transition,keyframe</span>
+                            <!-- (translate,rotate,scale,skew, matrix) -->
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>                        
+                    </div>                       
+
+                    <div class="item">
+                        <h4 class="title">CSS</h4>
+                        <p class="description">
+                            <span class="date">shadow, gradient, clip-path</span>
+                            <!-- Design (shadow(text, box), gradient(linear, radial, conics), clip-path) -->
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>                        
+                    </div>        
+
+                    <div class="item">
+                        <h4 class="title">CSS</h4>
+                        <p class="description">
+                            <span class="date">Responsive (반응형)</span>
+                            <span class="issuer">media query</span>
+                        </p>                        
+                    </div>                                        
+
+
+                    <div class="item">
+                        <h4 class="title">CSS</h4>
+                        <p class="description">
+                            <span class="date">Responsive (반응형)</span>
+                            <span class="issuer">px, rem, em, %, vh, vw</span>
+                        </p>                        
+                    </div>                           
+                                        
+                    <div class="item">
+                        <h4 class="title">Web Slider </h4>
+                        <p class="description">
+                            <span class="date">사용js : Swiper.js</span>
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>                        
+                    </div>
+
+                    <a href="./study/figma.html">
+                    <div class="item">
+                        <h4 class="title">Figma</h4>
+                        <p class="description">
+                            <span class="date">AutoLayout, Constraints</span>
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>                        
+                    </div> 
+                    </a>
+
+                    <div class="item">
+                        <h4 class="title">Vanilla JS</h4>
+                        <p class="description">
+                            <span class="date">Function, Closer, DOM, BOM</span>
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>                        
+                    </div>          
+                    
+                    <div class="item">
+                        <h4 class="title">Vanilla JS</h4>
+                        <p class="description">
+                            <span class="date">Cookie</span>
+                            <!-- <span class="issuer">lang:Vanilla JS</span> -->
+                        </p>                        
+                    </div>                            
+                                             
+
+                </div>
+            </div>
+    </section>
+    <!--Study end -->        
+
     <!--footer-copyright start-->
     <footer id="footer-copyright" class="footer-copyright">
         <div class="container">
@@ -622,6 +745,7 @@
     <script src="assets/js/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/my.js"></script>
 
     <!-- Custom Video Script -->
     <script>
@@ -639,30 +763,43 @@
         });
 
 
-        // 스크롤 애니메이션 효과
+        // 2.스크롤 애니메이션 효과
         function animateOnScroll() {
-            const items = document.querySelectorAll('.item');
+            const items = document.querySelectorAll('.item'); 
+            // .item 클래스를 가진 모든 요소를 선택해서 items라는 NodeList에 저장
+            // 즉, 애니메이션 대상이 되는 모든 콘텐츠 블록을 가져옴
             
-            items.forEach((item, index) => {
-                const itemTop = item.getBoundingClientRect().top;
-                const itemVisible = 150;
-                
-                if (itemTop < window.innerHeight - itemVisible) {
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, index * 100);
+            items.forEach((item, index) => {  // 각 .item 요소를 반복하면서 item은 현재 요소, index는 순서 번호
+                const itemTop = item.getBoundingClientRect().top; 
+                // 현재 요소의 상단 위치를 브라우저 뷰포트 기준으로 계산
+                // 즉, 화면 위에서부터 얼마나 떨어져 있는지 확인
+
+                const itemVisible = 100;
+                // 기준값 설정: 요소가 화면 하단에서 100px 이내로 들어오면 애니메이션 시작
+                // 더 작게 하면 더 늦게 등장함
+
+                if (itemTop < window.innerHeight - itemVisible) {   
+                // 현재 요소가 화면 안에 들어왔는지 판단
+                // window.innerHeight는 브라우저 창 높이
+                // 예: 창 높이가 800px이고 itemTop이 720px이면 → 720 < 700 → 조건 만족                    
+                    setTimeout(() => {  // <--- 지연 함수 사용
+                        item.style.opacity = '1'; // 보이게함
+                        item.style.transform = 'translateY(0)';  // 원래 위치로 이동
+                    }, index * 0);  // <--- 구. index에 100ms를 곱하여 지연  
+                    // 첫 번째 항목 (index 0): 지연 시간 0ms (즉시)   
+                    // 두 번째 항목 (index 1): 지연 시간 100ms
                 }
             });
         }
 
-        // 초기 스타일 설정
+        // 1.초기 스타일 설정  
+        // 모든 항목이 화면에서 숨겨진 상태로 시작
         document.addEventListener('DOMContentLoaded', function() {
             const items = document.querySelectorAll('.item');
             items.forEach(item => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(50px)';
-                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                item.style.opacity = '0';  // 투명하게 숨김
+                item.style.transform = 'translateY(50px)';   // 아래로 50px 이동
+                item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';  // 애니메이션 효과 설정
             });
         });
 
