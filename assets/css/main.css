@@ -273,7 +273,7 @@ nav.navbar.bootsnav .navbar-toggle i {
     content: " ";
     top: 0;
     left: 0;
-    background: rgba(31, 44, 108, .65);
+    background: rgba(31, 44, 108, .3);
     width: 100%;
     height: 100%;
 }
